@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B73E27EC15E8F77600412B5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E27EB15E8F77600412B5B /* UIKit.framework */; };
+		B73E27EE15E8F77600412B5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E27ED15E8F77600412B5B /* Foundation.framework */; };
+		B73E27F015E8F77600412B5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E27EF15E8F77600412B5B /* CoreGraphics.framework */; };
+		B73E27F615E8F77600412B5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B73E27F415E8F77600412B5B /* InfoPlist.strings */; };
+		B73E27F815E8F77600412B5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B73E27F715E8F77600412B5B /* main.m */; };
+		B73E27FC15E8F77600412B5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B73E27FB15E8F77600412B5B /* AppDelegate.m */; };
+		B73E27FF15E8F77600412B5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73E27FE15E8F77600412B5B /* ViewController.m */; };
+		B73E280215E8F77600412B5B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E280015E8F77600412B5B /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B73E27E715E8F77600412B5B /* musictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musictures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B73E27EB15E8F77600412B5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B73E27ED15E8F77600412B5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B73E27EF15E8F77600412B5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B73E27F315E8F77600412B5B /* musictures-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "musictures-Info.plist"; sourceTree = "<group>"; };
+		B73E27F515E8F77600412B5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B73E27F715E8F77600412B5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B73E27F915E8F77600412B5B /* musictures-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musictures-Prefix.pch"; sourceTree = "<group>"; };
+		B73E27FA15E8F77600412B5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B73E27FB15E8F77600412B5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B73E27FD15E8F77600412B5B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B73E27FE15E8F77600412B5B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B73E280115E8F77600412B5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B73E27E415E8F77600412B5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73E27EC15E8F77600412B5B /* UIKit.framework in Frameworks */,
+				B73E27EE15E8F77600412B5B /* Foundation.framework in Frameworks */,
+				B73E27F015E8F77600412B5B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B73E27DC15E8F77600412B5B = {
+			isa = PBXGroup;
+			children = (
+				B73E27F115E8F77600412B5B /* musictures */,
+				B73E27EA15E8F77600412B5B /* Frameworks */,
+				B73E27E815E8F77600412B5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B73E27E815E8F77600412B5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B73E27E715E8F77600412B5B /* musictures.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B73E27EA15E8F77600412B5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B73E27EB15E8F77600412B5B /* UIKit.framework */,
+				B73E27ED15E8F77600412B5B /* Foundation.framework */,
+				B73E27EF15E8F77600412B5B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B73E27F115E8F77600412B5B /* musictures */ = {
+			isa = PBXGroup;
+			children = (
+				B73E27FA15E8F77600412B5B /* AppDelegate.h */,
+				B73E27FB15E8F77600412B5B /* AppDelegate.m */,
+				B73E27FD15E8F77600412B5B /* ViewController.h */,
+				B73E27FE15E8F77600412B5B /* ViewController.m */,
+				B73E280015E8F77600412B5B /* ViewController.xib */,
+				B73E27F215E8F77600412B5B /* Supporting Files */,
+			);
+			path = musictures;
+			sourceTree = "<group>";
+		};
+		B73E27F215E8F77600412B5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B73E27F315E8F77600412B5B /* musictures-Info.plist */,
+				B73E27F415E8F77600412B5B /* InfoPlist.strings */,
+				B73E27F715E8F77600412B5B /* main.m */,
+				B73E27F915E8F77600412B5B /* musictures-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B73E27E615E8F77600412B5B /* musictures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B73E280515E8F77600412B5B /* Build configuration list for PBXNativeTarget "musictures" */;
+			buildPhases = (
+				B73E27E315E8F77600412B5B /* Sources */,
+				B73E27E415E8F77600412B5B /* Frameworks */,
+				B73E27E515E8F77600412B5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = musictures;
+			productName = musictures;
+			productReference = B73E27E715E8F77600412B5B /* musictures.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B73E27DE15E8F77600412B5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Alex Waterston";
+			};
+			buildConfigurationList = B73E27E115E8F77600412B5B /* Build configuration list for PBXProject "musictures" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B73E27DC15E8F77600412B5B;
+			productRefGroup = B73E27E815E8F77600412B5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B73E27E615E8F77600412B5B /* musictures */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B73E27E515E8F77600412B5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73E27F615E8F77600412B5B /* InfoPlist.strings in Resources */,
+				B73E280215E8F77600412B5B /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B73E27E315E8F77600412B5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73E27F815E8F77600412B5B /* main.m in Sources */,
+				B73E27FC15E8F77600412B5B /* AppDelegate.m in Sources */,
+				B73E27FF15E8F77600412B5B /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B73E27F415E8F77600412B5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B73E27F515E8F77600412B5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B73E280015E8F77600412B5B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B73E280115E8F77600412B5B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B73E280315E8F77600412B5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B73E280415E8F77600412B5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B73E280615E8F77600412B5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "musictures/musictures-Prefix.pch";
+				INFOPLIST_FILE = "musictures/musictures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B73E280715E8F77600412B5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "musictures/musictures-Prefix.pch";
+				INFOPLIST_FILE = "musictures/musictures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B73E27E115E8F77600412B5B /* Build configuration list for PBXProject "musictures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B73E280315E8F77600412B5B /* Debug */,
+				B73E280415E8F77600412B5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B73E280515E8F77600412B5B /* Build configuration list for PBXNativeTarget "musictures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B73E280615E8F77600412B5B /* Debug */,
+				B73E280715E8F77600412B5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B73E27DE15E8F77600412B5B /* Project object */;
+}
