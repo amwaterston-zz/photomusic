@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "PdAudioController.h"
 
 @implementation AppDelegate
 
@@ -19,7 +20,38 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    // load our audio controller
+	self.audioController = [[PdAudioController alloc] init];
+	[self.audioController configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
+	
+	// set AppDelegate as PdRecieverDelegate to recieve messages from Libpd
+	[PdBase setDelegate:self];
+    
+	// initialize extern lrshift~ - note this extern must be statically linked with the app;
+	// externs can not be loaded dynamically on iOS
+	lrshift_tilde_setup();
+	
+	[self openAndRunTestPatch];
+	[self.audioController print];
+    
     return YES;
+}
+
+-(void)playNote:(int)n {
+    [PdBase sendFloat:n toReceiver:@"midinote"]; [PdBase sendBangToReceiver:@"trigger"];
+}
+
+- (void)openAndRunTestPatch {
+	// open patch located in app bundle
+    [PdBase openFile:@"YannOsc.pd" path:[[NSBundle mainBundle] bundlePath]];
+	[self.audioController setActive:YES];
+}
+
+// receivePrint delegate method to receive "print" messages from Libpd
+// for simplicity we are just sending print messages to the debugging console
+- (void)receivePrint:(NSString *)message {
+	NSLog(@"(pd) %@", message);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

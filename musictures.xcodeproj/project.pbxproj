@@ -15,7 +15,36 @@
 		B73E27FC15E8F77600412B5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B73E27FB15E8F77600412B5B /* AppDelegate.m */; };
 		B73E27FF15E8F77600412B5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73E27FE15E8F77600412B5B /* ViewController.m */; };
 		B73E280215E8F77600412B5B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E280015E8F77600412B5B /* ViewController.xib */; };
+		B73E280915E8F7B100412B5B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E280815E8F7B100412B5B /* AVFoundation.framework */; };
+		B73E280D15E8F7D400412B5B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E280A15E8F7D400412B5B /* CoreImage.framework */; };
+		B73E280E15E8F7D400412B5B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E280B15E8F7D400412B5B /* CoreMedia.framework */; };
+		B73E280F15E8F7D400412B5B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E280C15E8F7D400412B5B /* ImageIO.framework */; };
+		B73E281115E8F7FD00412B5B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E281015E8F7FD00412B5B /* CoreVideo.framework */; };
+		B73E282E15E8FDB700412B5B /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E282B15E8FDA800412B5B /* libpd-ios.a */; };
+		B73E283215E9008600412B5B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E282F15E9008600412B5B /* AudioToolbox.framework */; };
+		B73E283415E9008600412B5B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73E283115E9008600412B5B /* CoreAudio.framework */; };
+		B73E283615E9014100412B5B /* lrshift~.c in Sources */ = {isa = PBXBuildFile; fileRef = B73E283515E9014100412B5B /* lrshift~.c */; };
+		B73E283815E901BA00412B5B /* LoopWithExtern.pd in Resources */ = {isa = PBXBuildFile; fileRef = B73E283715E901B900412B5B /* LoopWithExtern.pd */; };
+		B73E283A15E9024100412B5B /* Banjo_B3.wav in Resources */ = {isa = PBXBuildFile; fileRef = B73E283915E9024100412B5B /* Banjo_B3.wav */; };
+		B73E283D15E91C8000412B5B /* YannOsc.pd in Resources */ = {isa = PBXBuildFile; fileRef = B73E283C15E91C8000412B5B /* YannOsc.pd */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B73E282A15E8FDA800412B5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B73E282215E8FDA800412B5B /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+		B73E282C15E8FDA800412B5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B73E282215E8FDA800412B5B /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B73E27E715E8F77600412B5B /* musictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musictures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +60,18 @@
 		B73E27FD15E8F77600412B5B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B73E27FE15E8F77600412B5B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B73E280115E8F77600412B5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B73E280815E8F7B100412B5B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B73E280A15E8F7D400412B5B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B73E280B15E8F7D400412B5B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B73E280C15E8F7D400412B5B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B73E281015E8F7FD00412B5B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B73E282215E8FDA800412B5B /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = libpd/libpd.xcodeproj; sourceTree = "<group>"; };
+		B73E282F15E9008600412B5B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B73E283115E9008600412B5B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		B73E283515E9014100412B5B /* lrshift~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "lrshift~.c"; path = "libpd/pure-data/extra/lrshift~/lrshift~.c"; sourceTree = SOURCE_ROOT; };
+		B73E283715E901B900412B5B /* LoopWithExtern.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoopWithExtern.pd; sourceTree = "<group>"; };
+		B73E283915E9024100412B5B /* Banjo_B3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Banjo_B3.wav; sourceTree = "<group>"; };
+		B73E283C15E91C8000412B5B /* YannOsc.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YannOsc.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +79,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73E283215E9008600412B5B /* AudioToolbox.framework in Frameworks */,
+				B73E283415E9008600412B5B /* CoreAudio.framework in Frameworks */,
+				B73E282E15E8FDB700412B5B /* libpd-ios.a in Frameworks */,
+				B73E281115E8F7FD00412B5B /* CoreVideo.framework in Frameworks */,
+				B73E280D15E8F7D400412B5B /* CoreImage.framework in Frameworks */,
+				B73E280E15E8F7D400412B5B /* CoreMedia.framework in Frameworks */,
+				B73E280F15E8F7D400412B5B /* ImageIO.framework in Frameworks */,
+				B73E27F015E8F77600412B5B /* CoreGraphics.framework in Frameworks */,
+				B73E280915E8F7B100412B5B /* AVFoundation.framework in Frameworks */,
 				B73E27EC15E8F77600412B5B /* UIKit.framework in Frameworks */,
 				B73E27EE15E8F77600412B5B /* Foundation.framework in Frameworks */,
-				B73E27F015E8F77600412B5B /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +99,7 @@
 		B73E27DC15E8F77600412B5B = {
 			isa = PBXGroup;
 			children = (
+				B73E282215E8FDA800412B5B /* libpd.xcodeproj */,
 				B73E27F115E8F77600412B5B /* musictures */,
 				B73E27EA15E8F77600412B5B /* Frameworks */,
 				B73E27E815E8F77600412B5B /* Products */,
@@ -67,6 +117,13 @@
 		B73E27EA15E8F77600412B5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B73E282F15E9008600412B5B /* AudioToolbox.framework */,
+				B73E283115E9008600412B5B /* CoreAudio.framework */,
+				B73E281015E8F7FD00412B5B /* CoreVideo.framework */,
+				B73E280A15E8F7D400412B5B /* CoreImage.framework */,
+				B73E280B15E8F7D400412B5B /* CoreMedia.framework */,
+				B73E280C15E8F7D400412B5B /* ImageIO.framework */,
+				B73E280815E8F7B100412B5B /* AVFoundation.framework */,
 				B73E27EB15E8F77600412B5B /* UIKit.framework */,
 				B73E27ED15E8F77600412B5B /* Foundation.framework */,
 				B73E27EF15E8F77600412B5B /* CoreGraphics.framework */,
@@ -77,6 +134,8 @@
 		B73E27F115E8F77600412B5B /* musictures */ = {
 			isa = PBXGroup;
 			children = (
+				B73E283B15E9024A00412B5B /* PD */,
+				B73E283515E9014100412B5B /* lrshift~.c */,
 				B73E27FA15E8F77600412B5B /* AppDelegate.h */,
 				B73E27FB15E8F77600412B5B /* AppDelegate.m */,
 				B73E27FD15E8F77600412B5B /* ViewController.h */,
@@ -96,6 +155,25 @@
 				B73E27F915E8F77600412B5B /* musictures-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B73E282315E8FDA800412B5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B73E282B15E8FDA800412B5B /* libpd-ios.a */,
+				B73E282D15E8FDA800412B5B /* libpd-osx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B73E283B15E9024A00412B5B /* PD */ = {
+			isa = PBXGroup;
+			children = (
+				B73E283C15E91C8000412B5B /* YannOsc.pd */,
+				B73E283715E901B900412B5B /* LoopWithExtern.pd */,
+				B73E283915E9024100412B5B /* Banjo_B3.wav */,
+			);
+			name = PD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,12 +215,35 @@
 			mainGroup = B73E27DC15E8F77600412B5B;
 			productRefGroup = B73E27E815E8F77600412B5B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B73E282315E8FDA800412B5B /* Products */;
+					ProjectRef = B73E282215E8FDA800412B5B /* libpd.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B73E27E615E8F77600412B5B /* musictures */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B73E282B15E8FDA800412B5B /* libpd-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-ios.a";
+			remoteRef = B73E282A15E8FDA800412B5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B73E282D15E8FDA800412B5B /* libpd-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-osx.a";
+			remoteRef = B73E282C15E8FDA800412B5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B73E27E515E8F77600412B5B /* Resources */ = {
@@ -151,6 +252,9 @@
 			files = (
 				B73E27F615E8F77600412B5B /* InfoPlist.strings in Resources */,
 				B73E280215E8F77600412B5B /* ViewController.xib in Resources */,
+				B73E283815E901BA00412B5B /* LoopWithExtern.pd in Resources */,
+				B73E283A15E9024100412B5B /* Banjo_B3.wav in Resources */,
+				B73E283D15E91C8000412B5B /* YannOsc.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +268,7 @@
 				B73E27F815E8F77600412B5B /* main.m in Sources */,
 				B73E27FC15E8F77600412B5B /* AppDelegate.m in Sources */,
 				B73E27FF15E8F77600412B5B /* ViewController.m in Sources */,
+				B73E283615E9014100412B5B /* lrshift~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +348,17 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "musictures/musictures-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"libpd/pure-data/src",
+					libpd/objc,
+				);
 				INFOPLIST_FILE = "musictures/musictures-Info.plist";
+				OTHER_CFLAGS = (
+					"-DPD",
+					"-DUSEAPI_DUMMY",
+					"-DHAVE_LIBDL",
+					"-DHAVE_UNISTD_H",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,7 +369,17 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "musictures/musictures-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"libpd/pure-data/src",
+					libpd/objc,
+				);
 				INFOPLIST_FILE = "musictures/musictures-Info.plist";
+				OTHER_CFLAGS = (
+					"-DPD",
+					"-DUSEAPI_DUMMY",
+					"-DHAVE_LIBDL",
+					"-DHAVE_UNISTD_H",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
