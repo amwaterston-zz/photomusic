@@ -404,6 +404,7 @@
 				B73E280715E8F77600412B5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,6 +14,7 @@
 
 @implementation ViewController
 @synthesize imageView;
+@synthesize colourView;
 @synthesize useFrontCamera, captureSession, stillImageOutput;
 
 - (void)viewDidLoad
@@ -26,6 +27,7 @@
 - (void)viewDidUnload
 {
     [self setImageView:nil];
+    [self setColourView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -58,6 +60,10 @@
 - (void)shutDownCapture {
     [self.captureSession stopRunning];
     self.captureSession = nil;
+}
+
+- (IBAction)tap {
+    [PdBase sendBangToReceiver:@"tap"];
 }
 
 - (void)initCapture {
@@ -124,14 +130,15 @@
 }
 
 
--(void)playNoteRed:(int)r green:(int)g blue:(int)b {
-    [PdBase sendFloat:r toReceiver:@"midinote"];
-    [PdBase sendFloat:g toReceiver:@"midinote2"];
-    [PdBase sendFloat:b toReceiver:@"midinote3"];
+-(void)playNoteRed:(CGFloat)r green:(CGFloat)g blue:(CGFloat)b inQuad:(NSInteger)quad {
+    
+    [PdBase sendFloat:r toReceiver:[NSString stringWithFormat:@"q%dr", quad]];
+    [PdBase sendFloat:g toReceiver:[NSString stringWithFormat:@"q%dg", quad]];
+    [PdBase sendFloat:b toReceiver:[NSString stringWithFormat:@"q%db", quad]];
 }
 
 struct pixel {
-    unsigned char r, g, b, a;
+    unsigned char b, g, r, a;
 };
 
 - (void) captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
@@ -147,25 +154,60 @@ struct pixel {
         
         /*Create a CGImageRef from the CVImageBufferRef*/
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        CGContextRef newContext = CGBitmapContextCreate(baseAddress, width, height, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+        CGContextRef newContext = CGBitmapContextCreate(baseAddress, width, height, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast);
     
-        NSInteger red, green, blue;
+        CGFloat red[2][2] = {0};
+        CGFloat green[2][2] = {0};
+        CGFloat blue[2][2] = {0};
         
         struct pixel* pix = (struct pixel*)baseAddress;
         
-        NSUInteger numberOfPixels = width * height;
-        for (int i=0; i<numberOfPixels; i++) {
-            red += pix[i].r;
-            green += pix[i].g;
-            blue += pix[i].b;
+        CGFloat mult[2] = { 1.0f/4.0f, 3.0f/4.0f };
+        for (int x = 0; x < 2; x++) {
+            for (int y = 0; y < 2; y++) {
+                int p = (int)(width * mult[x] + (width * mult[y] * height));
+                red[x][y] = pix[p].r;
+                green[x][y] = pix[p].g;
+                blue[x][y] = pix[p].b;
+            }
         }
-        
-        red /= numberOfPixels;
-        green /= numberOfPixels;
-        blue/= numberOfPixels;
-        
-        NSLog(@"red %d", red);
-        [self playNoteRed:(red / 256.0f) * 100.0f green:(green / 256.0f) * 100.0f blue:(blue / 256.0f) * 100.0f];
+        /*
+        NSUInteger numberOfPixels = (width / 2) * (height / 2);
+        for (int x = 0; x < width; x ++) {
+            for (int y = 0; y < height; y ++) {
+                int p = y * width + x;
+                int qx, qy;
+                if ( x < width / 2) {
+                    qx = 0;
+                } else {
+                    qx = 1;
+                }
+                
+                if ( y < height / 2) {
+                    qy = 0;
+                } else {
+                    qy = 1;
+                }
+                
+                //NSLog (@"pix[%d].r = %d", p, pix[p].r);
+                
+                red[qx][qy] += pix[p].r;
+                green[qx][qy] += pix[p].g;
+                blue[qx][qy] += pix[p].b;
+            }
+        }
+        */
+        for (int qx = 0; qx < 2; qx++) {
+            for (int qy = 0; qy < 2; qy++) {
+                red[qx][qy] = (red[qx][qy] * 1.0f); // / (numberOfPixels);
+                green[qx][qy] = (green[qx][qy] * 1.0f); // / (numberOfPixels);
+                blue[qx][qy] = (blue[qx][qy] * 1.0f); // / (numberOfPixels);
+                //NSLog(@"Q[%d, %d] red = %.2f, green = %.2f, blue = %.2f", qx, qy, red[qx][qy], green[qx][qy], blue[qx][qy]);
+                [self playNoteRed:red[qx][qy] green:green[qx][qy] blue:blue[qx][qy] inQuad:qx+(qy*2)];
+                UIView *v = [self.colourView objectAtIndex:qx+(qy*2)];
+                [v performSelectorOnMainThread:@selector(setBackgroundColor:) withObject:[UIColor colorWithRed:red[qx][qy] / 256.0f green:green[qx][qy] / 256.0f blue:blue[qx][qy] / 256.0f alpha:1.0f] waitUntilDone:NO];
+            }
+        }
         
         /*We release some components*/
         CGContextRelease(newContext);

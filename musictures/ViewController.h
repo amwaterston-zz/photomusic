@@ -13,13 +13,14 @@
 @interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *colourView;
 
 @property (nonatomic) AVCaptureStillImageOutput *stillImageOutput;
 @property (nonatomic) AVCaptureSession *captureSession;
 @property (nonatomic) BOOL useFrontCamera;
 @property (nonatomic) int note;
 
+- (IBAction)tap;
 - (void)initCapture;
-- (IBAction)musicIt:(id)sender;
 
 @end
